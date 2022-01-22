@@ -88,7 +88,14 @@ const showAnswers = () => {
     }
   });
 
-  alert(`You've scored ${correct}`);
+  // alert(`You've scored ${correct}`);
+  if (correct >= 4) {
+    alert("Yes");
+  } else if (correct <= 3 && correct >= 2) {
+    alert("Maybe");
+  } else {
+    alert("No");
+  }
 };
 createQuiz();
 submitBtn.addEventListener("click", () => {
